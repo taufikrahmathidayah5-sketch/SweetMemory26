@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sweet Memory: Coffee &amp; Pastry</title>
+<meta name="description" content="Katalog menu Sweet Memory: Coffee & Pastry. Kopi, pastry, cake, dan dessert.">
+<link rel="icon" href="assets/logo/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#home" class="brand"><img src="assets/logo/logo.svg" alt="" width="36" height="36"><span>Sweet Memory<small>Coffee &amp; Pastry</small></span></a>
+  <button class="burger" id="burger" aria-label="Buka menu navigasi" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  <nav id="links">
+    <a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>A Little Sweetness in Every Memory</h1>
+    <p>Sweet Memory: Coffee &amp; Pastry menyajikan kopi, pastry, cake, dan dessert yang dibuat untuk menemani momen kecil Anda.</p>
+    <a class="btn" href="#menu">Explore Our Menu <i class="fa-solid fa-arrow-down"></i></a>
+  </div>
+  <div class="hero-img">
+    <img class="arch a1" src="assets/images/pastry/croissant.jpg" alt="Croissant keju dan cokelat">
+    <img class="arch a2" src="assets/images/cake/lotus-melt-cake.jpg" alt="Lotus Melt Cake">
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <h2>Our Menu</h2>
+    <div class="tools">
+      <label class="search"><i class="fa-solid fa-magnifying-glass"></i>
+        <input id="q" type="search" placeholder="Cari menu, misalnya croissant atau latte" aria-label="Cari menu"></label>
+      <div class="chips" id="chips" role="group" aria-label="Filter kategori">
+        <button class="chip on" data-cat="all">All Menu</button>
+        <button class="chip" data-cat="coffee">Coffee</button>
+        <button class="chip" data-cat="pastry">Pastry</button>
+        <button class="chip" data-cat="cake">Cake &amp; Dessert</button>
+        <button class="chip" data-cat="other">Other Menu</button>
+      </div>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>Menu tidak ditemukan. Coba kata kunci lain atau pilih All Menu.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-in">
+    <h2>About Us</h2>
+    <p>Sweet Memory adalah tempat untuk menikmati berbagai pilihan kopi, pastry, dan dessert dengan cita rasa istimewa. Kami percaya bahwa setiap sajian memiliki cerita dan mampu menciptakan kenangan manis dalam setiap momen.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="c-grid">
+      <ul>
+        <li><i class="fa-brands fa-whatsapp"></i><span>WhatsApp<br><a href="https://wa.me/6282348518906">0823-4851-8906</a></span></li>
+        <li><i class="fa-brands fa-instagram"></i><span>Instagram<br><a href="https://instagram.com/smspace_" target="_blank" rel="noopener">@smspace_</a></span></li>
+        <li><i class="fa-solid fa-location-dot"></i><span>Alamat<br>[Alamat toko akan diisi]</span></li>
+        <li><i class="fa-regular fa-clock"></i><span>Jam operasional<br>[Senin – Minggu, 00.00 – 00.00]</span></li>
+      </ul>
+      <a class="btn wa" href="https://wa.me/6282348518906?text=Halo%20Sweet%20Memory%2C%20saya%20ingin%20bertanya%20tentang%20menu." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chat via WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="brand"><img src="assets/logo/logo.svg" alt="" width="32" height="32"><span>Sweet Memory<small>Coffee &amp; Pastry</small></span></span>
+    <span class="soc"><a href="https://instagram.com/smspace_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://wa.me/6282348518906" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></span>
+    <small>&copy; 2026 Sweet Memory: Coffee &amp; Pastry</small>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="d-name">
+  <button class="close" id="close" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+  <div class="d-img"><img id="d-img" alt=""></div>
+  <div class="d-body">
+    <span class="tag" id="d-cat"></span>
+    <h3 id="d-name"></h3>
+    <p id="d-desc"></p>
+    <ul class="d-list" id="d-list"></ul>
+    <p class="d-price" id="d-price"></p>
+    <a class="btn wa" id="d-wa" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp</a>
+  </div>
+</dialog>
+
+<button class="top" id="top" aria-label="Kembali ke atas" hidden><i class="fa-solid fa-chevron-up"></i></button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
